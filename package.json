@@ -1,5 +1,5 @@
 {
-  "name": "pocketbase-installer",
+  "name": "install-pocketbase",
   "version": "0.0.1",
   "description": "Install pocketbase easily using npx!",
   "keywords": [
@@ -7,11 +7,11 @@
     "installer",
     "cli"
   ],
-  "homepage": "https://github.com/ericc-ch/pocketbase-installer",
-  "bugs": "https://github.com/ericc-ch/pocketbase-installer/issues",
+  "homepage": "https://github.com/ericc-ch/install-pocketbase",
+  "bugs": "https://github.com/ericc-ch/install-pocketbase/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ericc-ch/pocketbase-installer.git"
+    "url": "git+https://github.com/ericc-ch/install-pocketbase.git"
   },
   "author": "Erick Christian <erickchristian48@gmail.com>",
   "type": "module",
@@ -22,7 +22,7 @@
     }
   },
   "bin": {
-    "pocketbase-installer": "./dist/cli.js"
+    "install-pocketbase": "./dist/cli.js"
   },
   "files": [
     "dist"

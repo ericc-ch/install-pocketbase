@@ -1,4 +1,4 @@
-# pocketbase-installer
+# install-pocketbase
 
 Install PocketBase easily using `npx`!
 
@@ -9,25 +9,25 @@ Install PocketBase easily using `npx`!
 **Install the latest version:**
 
 ```bash
-npx pocketbase-installer@latest
+npx install-pocketbase@latest
 ```
 
 **Install a specific version:**
 
 ```bash
-npx pocketbase-installer --tag <version>
+npx install-pocketbase --tag <version>
 ```
 
 **Install for a specific platform:**
 
 ```bash
-npx pocketbase-installer --platform <platform>
+npx install-pocketbase --platform <platform>
 ```
 
 **Interactive mode:**
 
 ```bash
-npx pocketbase-installer --interactive
+npx install-pocketbase --interactive
 ```
 
 ## Options

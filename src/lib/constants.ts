@@ -4,7 +4,7 @@ import path from "node:path"
 
 // Won't change during runtime, so it's fine even if it's static
 const TMP_DIR = await fs.mkdtemp(
-  path.join(os.tmpdir(), "pocketbase-installer-"),
+  path.join(os.tmpdir(), "install-pocketbase-"),
 )
 const DOWNLOAD_PATH = path.join(TMP_DIR, "pocketbase.zip")
 const BINARY_PATH = path.join(process.cwd(), "pocketbase")

@@ -10,6 +10,7 @@ import {
   getDownloadUrlInteractive,
 } from "./lib/get-download-url"
 import { getPlatform } from "./lib/get-platform"
+import { hasBinary } from "./lib/has-binary"
 import { unzip } from "./lib/unzip"
 import { install } from "./main"
 
@@ -43,6 +44,11 @@ const main = defineCommand({
   },
   run: async ({ args }) => {
     try {
+      if (!(await hasBinary("unzip"))) {
+        consola.error("unzip is not found in PATH")
+        process.exit(1)
+      }
+
       const downloadUrl =
         args.interactive ?
           await getDownloadUrlInteractive()

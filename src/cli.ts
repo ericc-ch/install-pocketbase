@@ -93,7 +93,7 @@ const main = defineCommand({
 
       consola.success(`Pocketbase installed to ${PATHS.BINARY_PATH}`)
 
-      // await fs.rm(PATHS.TMP_DIR, { recursive: true })
+      await fs.rm(PATHS.TMP_DIR, { recursive: true })
       consola.info(`Cleaned up temporary files at ${PATHS.TMP_DIR}`)
     } catch (error) {
       consola.error(error)

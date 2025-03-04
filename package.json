@@ -1,6 +1,6 @@
 {
   "name": "install-pocketbase",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Install pocketbase easily using npx!",
   "keywords": [
     "pocketbase",

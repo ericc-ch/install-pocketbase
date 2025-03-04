@@ -18,7 +18,7 @@ import { install } from "./main"
 const main = defineCommand({
   meta: {
     name: "pocketbase-installer",
-    description: "Install pocketbase using npx",
+    description: "Install pocketbase easily using npx!",
   },
   args: {
     tag: {

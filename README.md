@@ -30,6 +30,32 @@ npx install-pocketbase --platform <platform>
 npx install-pocketbase --interactive
 ```
 
+## Programmatic Usage
+
+You can also use `install-pocketbase` programmatically in your Node.js projects.
+
+**Installation:**
+
+```bash
+npm install install-pocketbase
+```
+
+**Usage:**
+
+```typescript
+import { getDownloadUrl, install } from "install-pocketbase";
+
+const downloadUrl = await getDownloadUrl({
+  tag: "latest",
+  platform: "linux_amd64",
+});
+await install(downloadUrl, {
+  onProgress: (progress, total) => {
+    console.log(`Downloaded ${progress} of ${total} bytes`);
+  },
+});
+```
+
 ## Options
 
 - `--tag`, `-t`: Version tag to install. Defaults to `latest`.

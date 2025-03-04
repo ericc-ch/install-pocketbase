@@ -1,15 +1,17 @@
 {
-  "name": "pkg-placeholder",
+  "name": "pocketbase-installer",
   "version": "0.0.0",
-  "description": "_description_",
+  "description": "Install pocketbase using npx",
   "keywords": [
-    "pkg-placeholder"
+    "pocketbase",
+    "installer",
+    "cli"
   ],
-  "homepage": "https://github.com/ericc-ch/pkg-placeholder",
-  "bugs": "https://github.com/ericc-ch/pkg-placeholder/issues",
+  "homepage": "https://github.com/ericc-ch/pocketbase-installer",
+  "bugs": "https://github.com/ericc-ch/pocketbase-installer/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ericc-ch/pkg-placeholder.git"
+    "url": "git+https://github.com/ericc-ch/pocketbase-installer.git"
   },
   "author": "Erick Christian <erickchristian48@gmail.com>",
   "type": "module",
@@ -20,7 +22,7 @@
     }
   },
   "bin": {
-    "pkg-placeholder": "./dist/cli.js"
+    "pocketbase-installer": "./dist/cli.js"
   },
   "files": [
     "dist"
@@ -42,11 +44,13 @@
     "*": "pnpm run lint --fix"
   },
   "dependencies": {
-    "citty": "^0.1.6"
+    "citty": "^0.1.6",
+    "consola": "^3.4.0",
+    "tinyexec": "^0.3.2"
   },
   "devDependencies": {
-    "@echristian/eslint-config": "^0.0.27",
-    "@types/node": "^22.13.8",
+    "@echristian/eslint-config": "^0.0.28",
+    "@types/node": "^22.13.9",
     "bumpp": "^10.0.3",
     "eslint": "^9.21.0",
     "jiti": "^2.4.2",

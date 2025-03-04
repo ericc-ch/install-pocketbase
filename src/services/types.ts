@@ -1,4 +1,4 @@
-export interface Asset {
+interface Asset {
   contentType: string
   size: number
   createdAt: string
@@ -7,7 +7,7 @@ export interface Asset {
   downloadUrl: string
 }
 
-export interface Release {
+interface Release {
   id: number
   tag: string
   author: string

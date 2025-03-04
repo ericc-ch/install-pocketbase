@@ -76,7 +76,7 @@ const main = defineCommand({
 
           lastPercentage = percent
 
-          console.info(
+          consola.info(
             `Downloaded ${formatter.format(progress)} / ${formatter.format(total)} (${percent}%)`,
           )
         },

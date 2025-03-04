@@ -2,6 +2,7 @@ import { defineCommand, runMain } from "citty"
 import consola from "consola"
 import { Buffer } from "node:buffer"
 import fs from "node:fs/promises"
+import path from "node:path"
 
 import { PATHS } from "./lib/constants"
 import { createFormatter } from "./lib/create-formatter"
@@ -75,7 +76,7 @@ const main = defineCommand({
           lastPercentage = percent
 
           console.info(
-            `Downloaded ${formatter.format(progress)} / ${total} (${percent}%)`,
+            `Downloaded ${formatter.format(progress)} / ${formatter.format(total)} (${percent}%)`,
           )
         },
       })
@@ -85,11 +86,14 @@ const main = defineCommand({
 
       await fs.writeFile(PATHS.DOWNLOAD_PATH, buffer)
       await unzip(PATHS.DOWNLOAD_PATH, PATHS.TMP_DIR)
-      await fs.copyFile(PATHS.TMP_DIR, PATHS.BINARY_PATH)
+      await fs.copyFile(
+        path.join(PATHS.TMP_DIR, "pocketbase"),
+        PATHS.BINARY_PATH,
+      )
 
       consola.success(`Pocketbase installed to ${PATHS.BINARY_PATH}`)
 
-      await fs.rm(PATHS.TMP_DIR, { recursive: true })
+      // await fs.rm(PATHS.TMP_DIR, { recursive: true })
       consola.info(`Cleaned up temporary files at ${PATHS.TMP_DIR}`)
     } catch (error) {
       consola.error(error)

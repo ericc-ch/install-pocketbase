@@ -1,10 +1,35 @@
 # pocketbase-installer
 
-_description_
+Install PocketBase easily using `npx`!
 
-> **Note**:
-> Replace `pocketbase-installer` and `_description_` globally to use this template.
+## Usage
 
-## License
+**Install the latest version:**
 
-[Mozilla Public License 2.0](./LICENSE.md) License
+```bash
+npx pocketbase-installer@latest
+```
+
+**Install a specific version:**
+
+```bash
+npx pocketbase-installer --tag <version>
+```
+
+**Install for a specific platform:**
+
+```bash
+npx pocketbase-installer --platform <platform>
+```
+
+**Interactive mode:**
+
+```bash
+npx pocketbase-installer --interactive
+```
+
+## Options
+
+- `--tag`, `-t`: Version tag to install. Defaults to `latest`.
+- `--platform`, `-p`: Platform to install. Defaults to your OS platform and architecture.
+- `--interactive`, `-i`: Interactive mode. Prompts you to select a version from the available releases. Defaults to `false`.
